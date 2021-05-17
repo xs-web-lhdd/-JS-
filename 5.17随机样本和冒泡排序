@@ -1,0 +1,31 @@
+// 冒泡排序：
+        var arr = [20,44,3,6,710,34];
+        var tmp;
+        for(var i = 0; i < arr.length; i++){
+
+            for(var j = 0; j < arr.length - i; j++){
+
+                if(arr[j] >= arr[j+1]){
+
+                    tmp = arr[j]
+                    arr[j] = arr[j+1];
+                    arr[j+1] = tmp;
+                }
+            }
+        }
+        console.log(arr);
+        
+        
+        
+        
+        // 去除随机样本：
+        var arr = [1,4,0,5,3,6];
+        var result = [];
+        for(var i = 0; i < arr.length; i++){
+            // 随机选择一项的下标，数组的下标 0~arr.length - 1;
+            // 之前学习随机数的公式：[a,b]区间的随机数 parseInt(Math.random() * (b-a+1)) + a;
+            var n = parseInt(Math.random() * arr.length);
+            result.push(arr[n]);
+            arr.splice(n,1);
+        }
+        console.log(result);
